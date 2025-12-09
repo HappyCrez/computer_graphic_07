@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e6e6e6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: rgba(25, 25, 35, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(to right, #0f3460, #533483);
+    border-bottom: 1px solid #444;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00b4db, #0083b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.upload-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(40, 40, 60, 0.7);
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+.upload-btn {
+    display: inline-block;
+    background: linear-gradient(to right, #4a6fa5, #166088);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.upload-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.upload-btn input {
+    display: none;
+}
+
+.image-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#imageName {
+    font-style: italic;
+    color: #aaa;
+}
+
+.secondary-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.secondary-btn:hover {
+    background-color: #555;
+}
+
+.workspace {
+    padding: 0 20px 20px;
+}
+
+.main-content {
+    display: flex;
+    gap: 30px;
+    background-color: rgba(30, 30, 40, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    min-height: 500px;
+}
+
+.canvas-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    background-color: #111;
+    border-radius: 8px;
+    border: 2px solid #555;
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+
+.canvas-label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #8a8aff;
+    font-size: 1.2rem;
+}
+
+.controls-section {
+    flex: 1;
+    min-width: 350px;
+}
+
+.control-panel {
+    background-color: rgba(30, 30, 45, 0.9);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-panel h2 {
+    color: #6ab7ff;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.slider-container {
+    margin-bottom: 15px;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.slider-with-value {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider-with-value input {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: #333;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider-with-value input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4286f4;
+    cursor: pointer;
+}
+
+#scaleValue {
+    font-weight: bold;
+    color: #4286f4;
+    font-size: 1.1rem;
+    min-width: 40px;
+}
+
+.method-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.method-btn {
+    background: linear-gradient(to right, #373b44, #4286f4);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.method-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quality-selector {
+    margin-bottom: 15px;
+}
+
+.quality-selector label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.quality-selector select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.reset-section {
+    margin-top: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(20, 20, 30, 0.9);
+    border-top: 1px solid #444;
+    color: #888;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .canvas-section {
+        height: 500px;
+    }
+    
+    .controls-section {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .upload-section {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+    
+    canvas {
+        max-height: 400px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Убираем подсветку при фокусе для улучшения UX */
+input:focus, select:focus, button:focus {
+    outline: 2px solid #4286f4;
+    outline-offset: 2px;
+}
+
+/* Анимация загрузки изображения */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.canvas-wrapper {
+    animation: fadeIn 0.3s ease-out;
+}
